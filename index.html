@@ -35,6 +35,13 @@
             margin-bottom: 20px;
         }
 
+        /* Estilos del párrafo */
+        .form-container p {
+            font-size: 14px;
+            color: #bbbbbb;
+            margin-bottom: 20px;
+        }
+
         /* Estilos de los inputs y textarea */
         .form-container input,
         .form-container textarea {
@@ -75,12 +82,20 @@
 <body>
     <div class="form-container">
         <h1>Eliminar Cuenta</h1>
-        <p>Completa el formulario para solicitar la eliminación de tu cuenta. Responderemos a la brevedad.</p>
+        <p>Completa el formulario para solicitar la eliminación de tu cuenta. Sigue estos pasos:</p>
+        <ol style="text-align: left; font-size: 14px; color: #bbbbbb;">
+            <li>Ingresa el correo electrónico asociado a la cuenta que deseas eliminar.</li>
+            <li>Escribe el motivo de la solicitud en el campo correspondiente.</li>
+            <li>Presiona el botón "Enviar Solicitud". Esto abrirá tu aplicación de correo predeterminada (como Gmail).</li>
+            <li>El correo se generará automáticamente con la información proporcionada.</li>
+            <li>Solo necesitas presionar "Enviar" en tu aplicación de correo para completar la solicitud.</li>
+        </ol>
         <form action="mailto:blasterxedius@gmail.com" method="post" enctype="text/plain">
-            <input type="email" name="correo" placeholder="ejemplo@correo.com" required>
-            <textarea name="motivo" placeholder="Escribe tu motivo aquí..." rows="4"></textarea>
+            <input type="email" name="correo" placeholder="ejemplo@correo.com (tu correo aquí)" required>
+            <textarea name="motivo" placeholder="Escribe tu motivo aquí..." rows="4" required></textarea>
             <button type="submit">Enviar Solicitud</button>
         </form>
     </div>
 </body>
 </html>
+
